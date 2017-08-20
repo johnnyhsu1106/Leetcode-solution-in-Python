@@ -23,6 +23,10 @@ class Solution:
         :rtype: bool
         """
         num_dict = {} # a storage to store all number if number appears before
+        # in order to avoid infinite loop, use a dict, set, or list to storage the number, which apprear before.
+        # For Example
+        # compute is 4 happy number
+        # 4 -> 16 -> 37 -> 57 -> 64 -> 42 -> 20 -> 4.......the following precess will repeat infinitely
 
         while n != 1 and n not in num_dict:
             num_dict[n] = n
@@ -32,9 +36,9 @@ class Solution:
             n = int(output)
         return n == 1
 
-def main():
-    s = Solution()
-    print(s.isHappy(7))
+# def main():
+#     s = Solution()
+#     print(s.isHappy(7))
 
 
 

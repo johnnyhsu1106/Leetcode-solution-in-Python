@@ -22,7 +22,8 @@ class Solution:
         :type n: int
         :rtype: bool
         """
-        num_dict = {}
+        num_dict = {} # a storage to store all number if number appears before
+
         while n != 1 and n not in num_dict:
             num_dict[n] = n
             output = 0

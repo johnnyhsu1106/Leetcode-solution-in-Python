@@ -60,6 +60,7 @@ class Solution:
 
             PS: the whole idea is like remove dulplicates element from a sorted array/list
             a sorted list, lst = [1,1,2,3,3]
+
             i = 0
             j = 1
             output = [lst[1]]
@@ -82,34 +83,34 @@ class Solution:
             current_node = next_node
         return head
 
-
-def main():
-
-    #  Test Case 1
-    linked_list = LinkedList()
-    linked_list.append(1)
-    linked_list.append(1)
-    linked_list.append(2)
-    print(linked_list)
-
-    s = Solution()
-    s.deleteDuplicates(linked_list.head)
-    print(linked_list)
-
-
-    # Test case 2
-    linked_list = LinkedList()
-    linked_list.append(1)
-    linked_list.append(1)
-    linked_list.append(2)
-    linked_list.append(3)
-    linked_list.append(3)
-
-    print(linked_list)
-
-    s = Solution()
-    s.deleteDuplicates(linked_list.head)
-    print(linked_list)
-
-if __name__ == '__main__':
-    main()
+# ================= Test Area ==================
+# def main():
+#
+#     #  Test Case 1
+#     linked_list = LinkedList()
+#     linked_list.append(1)
+#     linked_list.append(1)
+#     linked_list.append(2)
+#     print(linked_list)
+#
+#     s = Solution()
+#     s.deleteDuplicates(linked_list.head)
+#     print(linked_list)
+#
+#
+#     # Test case 2
+#     linked_list = LinkedList()
+#     linked_list.append(1)
+#     linked_list.append(1)
+#     linked_list.append(2)
+#     linked_list.append(3)
+#     linked_list.append(3)
+#
+#     print(linked_list)
+#
+#     s = Solution()
+#     s.deleteDuplicates(linked_list.head)
+#     print(linked_list)
+#
+# if __name__ == '__main__':
+#     main()

@@ -36,11 +36,13 @@ class Solution:
             n = int(output)
         return n == 1
 
+
+
+# =================== Testing area ===================
 # def main():
 #     s = Solution()
 #     print(s.isHappy(7))
 
 
-
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()

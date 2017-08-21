@@ -25,6 +25,9 @@ class Solution:
         Create a node of linked list for output, for example, dummy = ListNode(0)
         It doesn't mattter what the dummy (node) is.
         dummy is used for marked the begining of the output.
+        The reason why we have to create a dummy node in the begining of the linked list
+        is that when we manipulat the nodes of linked lists, we can make sure that
+        the first node won't change during the node manipulation.
 
         Then, compare the first node of each list, then pointer is pointed to the small one.
         Then move the node of the list with the smaller node and the node of current_node

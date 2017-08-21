@@ -96,19 +96,22 @@ class Solution:
             else:
                 root = root.left
         return root
+
+
+        
 # ================= Test Area ==================
-def main():
-    root = TreeNode(6)
-    append_lst = [2,8,0,4,7,9,3,5]
-    for num in append_lst:
-        root.append(num)
+# def main():
+    # root = TreeNode(6)
+    # append_lst = [2,8,0,4,7,9,3,5]
+    # for num in append_lst:
+    #     root.append(num)
+    #
+    # s = Solution()
+    # p = TreeNode(4)
+    # q = TreeNode(7)
+    # print(s.lowestCommonAncestor(root,p,q))
 
-    s = Solution()
-    p = TreeNode(4)
-    q = TreeNode(7)
-    print(s.lowestCommonAncestor(root,p,q))
 
 
-
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()

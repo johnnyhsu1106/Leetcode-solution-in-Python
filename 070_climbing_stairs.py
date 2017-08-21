@@ -38,11 +38,11 @@ class Solution:
         return current
 
 # ================= Test Area ==================
-def main():
-    s = Solution()
-    print(s.climbStairs_1(10))
-    print(s.climbStairs_2(10))
-
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     s = Solution()
+#     print(s.climbStairs_1(10))
+#     print(s.climbStairs_2(10))
+#
+#
+# if __name__ == '__main__':
+#     main()

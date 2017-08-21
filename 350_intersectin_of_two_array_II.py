@@ -44,7 +44,7 @@ class Solution:
                     nums1[i] = None
         return output
 
-        
+
     def intersect_2(self, nums1, nums2):
         c = collections.Counter(nums1) & collections.Counter(nums2)
         intersect = []

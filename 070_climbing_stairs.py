@@ -37,7 +37,7 @@ class Solution:
             previous, current = current, previous + current
         return current
 
-# ================= Test Area ==================
+
 # def main():
 #     s = Solution()
 #     print(s.climbStairs_1(10))

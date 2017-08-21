@@ -98,8 +98,6 @@ class Solution:
         return root
 
 
-        
-# ================= Test Area ==================
 # def main():
     # root = TreeNode(6)
     # append_lst = [2,8,0,4,7,9,3,5]

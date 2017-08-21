@@ -27,7 +27,7 @@ class Solution:
         return False
 
 
-# =================== Testinumg area ===================
+
 # def main():
 #     s = Solution()
 #     print(s.isUgly(35))

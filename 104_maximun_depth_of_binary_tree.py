@@ -53,7 +53,7 @@ class Solution:
     def maxDepthHelper(self, node):
         if node is None:
             return 0
-
+        #  if node exists, at least level = 1
         level = 1
         if node.left or node.right:
             level += max(self.maxDepthHelper(node.left), self.maxDepthHelper(node.right))

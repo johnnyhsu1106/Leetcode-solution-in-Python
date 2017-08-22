@@ -18,6 +18,36 @@ class Solution:
         :type root: TreeNode
         :rtype: int
         """
+        '''
+        Tree1 depth = 3               Tree2 depth = 4
+               A                           3
+              / \                         / \
+             B   C                       4   4
+                / \                     /
+               D   E                   2
+                                      /
+                                     3
+        idea:
+        use reursion to solve this probelm.
+        if node exist, level = 1
+        if node.left exists or node.right exists, go one level down,
+        level += max (the max level right node has, the max level the left node has)
+
+        For example,
+        Tree1 depth = 3
+               A
+              / \
+             B   C
+                / \
+               D   E
+
+        D = 1 + level or none = 1 + 0 = 1
+        E = 1 + level of none = 1 + 0 = 1 
+        C = 1 + max(level of D or E) =  1 + 1 = 2
+        B = 1 + level of node = 1
+        A = 1 + max(level of B or C) = 1 + max(1,2) = 1 + 2 = 3
+        '''
+
         return self.maxDepthHelper(root)
 
     def maxDepthHelper(self, node):

@@ -10,6 +10,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
     def isSameTree(self, p, q):
         """
@@ -26,9 +27,10 @@ class Solution:
             return False
 
         # at same level, check the value of p and q are equal
-        if p and q:
+        elif p and q:
             if p.val != q.val:
                 return False
+        
 
         #  check next level (left node and right node) recursively
         return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)

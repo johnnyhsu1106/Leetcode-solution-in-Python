@@ -51,5 +51,5 @@ class Solution:
 #     print(s.romanToInt('MCMXCVI') == 1996)
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()

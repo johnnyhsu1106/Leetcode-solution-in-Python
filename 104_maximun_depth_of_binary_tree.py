@@ -42,9 +42,9 @@ class Solution:
                D   E
 
         D = 1 + level or none = 1 + 0 = 1
-        E = 1 + level of none = 1 + 0 = 1 
+        E = 1 + level of none = 1 + 0 = 1
         C = 1 + max(level of D or E) =  1 + 1 = 2
-        B = 1 + level of node = 1
+        B = 1 + level of node = 1 + 0 = 1
         A = 1 + max(level of B or C) = 1 + max(1,2) = 1 + 2 = 3
         '''
 

@@ -17,10 +17,11 @@ class Solution:
         current_node = head
         previous_node = None
         while current_node:
-
+            # before change then current_node.next, store it in a variable called next_code
             next_node = current_node.next
-            # chanage the pointer
+            # chanage the pointer to previous node
             current_node.next = previous_node
+
             # move on to next node
             previous_node = current_node
             current_node = next_node

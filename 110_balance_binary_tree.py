@@ -24,7 +24,7 @@ class Solution:
         For each node, the difference of left node's depth and rihgt node's depth can be greater than 1.
         First, write a method to calculate the depth of each node (please see leetcode problem 104)
         Second, write a helper method to go through each left node and right node
-        Then, call its self method recursively. (visit the left node and right node below) 
+        Then, call its self method recursively. (visit the left node and right node below)
 
         '''
 
@@ -46,6 +46,9 @@ class Solution:
 
 
     def depth(self, node):
+        '''
+        please see the leetcode problem 104
+        '''
         if not node:
             return 0
 

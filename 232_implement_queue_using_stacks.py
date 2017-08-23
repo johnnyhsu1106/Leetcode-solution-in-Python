@@ -21,9 +21,8 @@ class MyQueue:
     First, define the class Stack in the bottom.
     Then implement the stack method: push(), pop(), peek(), empty()
     There are two way to implement Stack:
-    1. create Node class
-    2. use build-in data structure - list
-    I choose to use build-in data structure, list, in Python
+    1. Create Node class
+    2. Use build-in data structure - list
 
     idea:
     Use two stacks to implement the queue.

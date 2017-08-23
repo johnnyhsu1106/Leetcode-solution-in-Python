@@ -24,6 +24,6 @@ class Solution:
             # move on to next node
             previous_node = current_node
             current_node = next_node
-            
-        head = current_node
+
+        head = previous_node
         return head

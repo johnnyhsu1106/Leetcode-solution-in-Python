@@ -14,6 +14,10 @@ class Solution:
         :type head: ListNode
         :rtype: ListNode
         """
+        '''
+        Traverse the linked list and change the node pointer, current_node.next = previous_node
+        However, remember, before change the pointer, store current_node.next to the next_node
+        '''
         current_node = head
         previous_node = None
         while current_node:

@@ -124,7 +124,7 @@ class Stack:
     def empty(self):
         return len(self.values) == 0
 
-def main():
+# def main():
     #  Test the class Stack
     # stack = Stack()
     # print(stack.empty())

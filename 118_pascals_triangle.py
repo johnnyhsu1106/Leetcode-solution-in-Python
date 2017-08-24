@@ -28,8 +28,8 @@ class Solution:
         For each element in one row (j=0, 1, ..., i)
         The first element and the last element in the list must be 1
         The other element has the following relationship.
-        at n=k, aj = aj-1 + aj, at n=k-1, if j != 0 or j != k-1
-        at n=k, a0 = 1 and ak = 1, if j=0 or j = k-1
+        aj(n) = aj-1(n-1) + aj(n-1), if j != 0 or j != k-1
+        a0 = 1 and ak = 1, if j=0 or j = k-1
 
         j is the index of each list, n is the row number
         '''

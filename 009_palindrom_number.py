@@ -15,7 +15,7 @@ you know that the reversed integer might overflow. How would you handle such cas
 There is a more generic way of solving this problem.
 '''
 class Solution:
-    def isPalindrome(self, x):
+    def isPalindrome_1(self, x):
         """
         :type x: int
         :rtype: bool
@@ -49,10 +49,10 @@ class Solution:
         elif x < 10:
             return True
         else:
-            return x == self.reverseInteger(x)
+            return x == self.reversePositiveInteger(x)
 
 
-    def reverseInteger(self,x):
+    def reversePositiveInteger(self,x):
         '''
         please see the problem 7
         '''
@@ -62,26 +62,25 @@ class Solution:
 
         while x > 0:
             digit = x % 10
-            output += digit
-            output *= 10
+            output = output * 10 + digit
             x = x // 10
-        return output // 10
+        return output
 
 
 
 # def main():
 #     s = Solution()
-#     # print(s.isPalindrome_1(-1) == False)
-#     # print(s.isPalindrome_1(0) == True)
-#     # print(s.isPalindrome_1(123) == False)
-#     # print(s.isPalindrome_1(202) == True)
+#     print(s.isPalindrome_1(-1) == False)
+#     print(s.isPalindrome_1(0) == True)
+#     print(s.isPalindrome_1(123) == False)
+#     print(s.isPalindrome_1(202) == True)
 #
 #     print(s.isPalindrome_2(-1) == False)
 #     print(s.isPalindrome_2(0) == True)
 #     print(s.isPalindrome_2(123) == False)
 #     print(s.isPalindrome_2(202) == True)
-
-
+#
+#
 #
 # if __name__ == '__main__':
 #     main()

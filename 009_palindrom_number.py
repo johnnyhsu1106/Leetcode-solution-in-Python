@@ -38,12 +38,24 @@ class Solution:
 
 
     def isPalindrome_2(self, x):
-        if x >=0:
-            return x == self.reverseInteger(x)
-        else:
+        '''
+        if x is negative integer, return False
+        if x is non-negative integer and less than 10, return True
+        if x > 10, reverse the integer, return reverseInteger(x) == x
+
+        '''
+        if x < 0:
             return False
+        elif x < 10:
+            return True
+        else:
+            return x == self.reverseInteger(x)
+
 
     def reverseInteger(self,x):
+        '''
+        please see the problem 7
+        '''
         #  do not convert integer to string
         #  only convert the non-negative integer
         output = 0
@@ -57,22 +69,19 @@ class Solution:
 
 
 
-def main():
-    s = Solution()
-    # print(s.isPalindrome_1(-1) == False)
-    # print(s.isPalindrome_1(0) == True)
-    # print(s.isPalindrome_1(123) == False)
-    # print(s.isPalindrome_1(202) == True)
-
-    print(s.isPalindrome_2(-1) == False)
-    print(s.isPalindrome_2(0) == True)
-    print(s.isPalindrome_2(123) == False)
-    print(s.isPalindrome_2(202) == True)
-
-
+# def main():
+#     s = Solution()
+#     # print(s.isPalindrome_1(-1) == False)
+#     # print(s.isPalindrome_1(0) == True)
+#     # print(s.isPalindrome_1(123) == False)
+#     # print(s.isPalindrome_1(202) == True)
+#
+#     print(s.isPalindrome_2(-1) == False)
+#     print(s.isPalindrome_2(0) == True)
+#     print(s.isPalindrome_2(123) == False)
+#     print(s.isPalindrome_2(202) == True)
 
 
-
-
-if __name__ == '__main__':
-    main()
+#
+# if __name__ == '__main__':
+#     main()

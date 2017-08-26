@@ -79,12 +79,12 @@ class Solution:
 
 
 
-def main():
-    s = Solution()
-    print(s.getNext('1'))
-    print(s.getNext('11'))
-    print(s.getNext('21'))
-
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     s = Solution()
+#     print(s.getNext('1'))
+#     print(s.getNext('11'))
+#     print(s.getNext('21'))
+#
+#
+# if __name__ == '__main__':
+#     main()

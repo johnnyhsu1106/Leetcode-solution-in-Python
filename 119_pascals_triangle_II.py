@@ -40,12 +40,12 @@ class Solution:
 
         return current_row
 
-def main():
-    s = Solution()
-    print(s.getRow(0))
-    print(s.getRow(1))
-    print(s.getRow(2))
-    print(s.getRow(3))
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     s = Solution()
+#     print(s.getRow(0))
+#     print(s.getRow(1))
+#     print(s.getRow(2))
+#     print(s.getRow(3))
+#
+# if __name__ == '__main__':
+#     main()

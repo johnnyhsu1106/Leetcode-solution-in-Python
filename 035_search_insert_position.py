@@ -41,19 +41,19 @@ class Solution:
             return mid
         return left
 
-def main():
-    '''
-    Here are few examples.
-    [1,3,5,6], 5 → 2
-    [1,3,5,6], 2 → 1
-    [1,3,5,6], 7 → 4
-    [1,3,5,6], 0 → 0
-    '''
-    s = Solution()
-    print(s.searchInsert([1,3,5,6],5) == 2)
-    print(s.searchInsert([1,3,5,6],2) == 1)
-    print(s.searchInsert([1,3,5,6],7) == 4)
-    print(s.searchInsert([1,3,5,6],0) == 0)
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     '''
+#     Here are few examples.
+#     [1,3,5,6], 5 → 2
+#     [1,3,5,6], 2 → 1
+#     [1,3,5,6], 7 → 4
+#     [1,3,5,6], 0 → 0
+#     '''
+#     s = Solution()
+#     print(s.searchInsert([1,3,5,6],5) == 2)
+#     print(s.searchInsert([1,3,5,6],2) == 1)
+#     print(s.searchInsert([1,3,5,6],7) == 4)
+#     print(s.searchInsert([1,3,5,6],0) == 0)
+#
+# if __name__ == '__main__':
+#     main()

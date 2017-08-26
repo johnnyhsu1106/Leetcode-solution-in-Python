@@ -66,7 +66,7 @@ class Solution:
             nums1[m+i] = nums2[i]
         nums1.sort()
 
-    def merge(self, nums1, m, nums2, n):
+    def merge_2(self, nums1, m, nums2, n):
         """
         :type nums1: List[int]
         :type m: int
@@ -171,17 +171,26 @@ class Solution:
 
 
 
-
-
-
-def main():
-    s = Solution()
-    nums1 = [0]
-    nums2 = [1]
-    m = 0
-    n = 1
-    s.merge_1(nums1, m, nums2, n)
-    print(nums1)
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     s = Solution()
+#
+#
+#     nums1 = [0]
+#     nums2 = [1]
+#     m = 0
+#     n = 1
+#     s.merge_1(nums1, m, nums2, n)
+#     print(nums1)
+#
+#
+#     nums1 = [0]
+#     nums2 = [1]
+#     m = 0
+#     n = 1
+#     s.merge_2(nums1, m, nums2, n)
+#     print(nums1)
+#
+#
+#
+# if __name__ == '__main__':
+#     main()

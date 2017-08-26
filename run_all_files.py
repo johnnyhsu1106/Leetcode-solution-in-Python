@@ -9,7 +9,7 @@ def run_all_files():
         print(py_file)
         os.system( "python " + py_file)
 
-    print("all files can be executed successfully")
+    print("All files can be executed successfully (no syntax error)")
 
 def main():
     run_all_files()

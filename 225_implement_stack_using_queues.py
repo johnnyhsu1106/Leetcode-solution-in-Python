@@ -70,7 +70,6 @@ class MyStack:
         """
         self.queue = Queue()
 
-
     def push(self, x):
         """
         Push element x onto stack.
@@ -78,7 +77,6 @@ class MyStack:
         :rtype: void
         """
         self.queue.push(x)
-
 
     def pop(self):
         """
@@ -88,7 +86,6 @@ class MyStack:
         for i in range(self.queue.size() -1):
             self.queue.push(self.queue.pop())
         return self.queue.pop()
-
 
     def top(self):
         """
@@ -101,6 +98,7 @@ class MyStack:
         self.queue.push(self.queue.pop())
         return top_element
 
+
     def empty(self):
         """
         Returns whether the stack is empty.
@@ -109,14 +107,14 @@ class MyStack:
         return self.queue.empty()
 
 
-# 
-# def main():
-#     stack = MyStack()
-#     stack.push(1)
-#     print(stack.queue)
-#     print(stack.pop())
-#     print(stack.empty())
 #
-#
-# if __name__ == '__main__':
-#     main()
+def main():
+    stack = MyStack()
+    stack.push(1)
+    print(stack.top() == 1)
+    print(stack.pop() == 1)
+    print(stack.empty() == True)
+
+
+if __name__ == '__main__':
+    main()

@@ -47,18 +47,18 @@ class MinStack:
             return min(self.stack)
 
 
-def main():
-    minStack = MinStack();
-    minStack.push(-2)
-    minStack.push(0)
-    minStack.push(-3)
-    print(minStack.getMin())
-    print(minStack.pop())
-    print(minStack.top())
-    print(minStack.getMin())
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     minStack = MinStack();
+#     minStack.push(-2)
+#     minStack.push(0)
+#     minStack.push(-3)
+#     print(minStack.getMin())
+#     print(minStack.pop())
+#     print(minStack.top())
+#     print(minStack.getMin())
+#
+# if __name__ == '__main__':
+#     main()
 
 # Your MinStack object will be instantiated and called as such:
 # obj = MinStack()

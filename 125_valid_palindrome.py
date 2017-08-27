@@ -61,15 +61,15 @@ class Solution:
             j -= 1
         return True
 
-
-def main():
-    s = Solution()
-    print(s.isPalindrome_1("0P"))
-    print(s.isPalindrome_1("A man, a plan, a canal: Panama"))
-
-    print(s.isPalindrome_2("0P"))
-    print(s.isPalindrome_2("A man, a plan, a canal: Panama"))
-
-
-if __name__ == '__main__':
-    main()
+# 
+# def main():
+#     s = Solution()
+#     print(s.isPalindrome_1("0P"))
+#     print(s.isPalindrome_1("A man, a plan, a canal: Panama"))
+#
+#     print(s.isPalindrome_2("0P"))
+#     print(s.isPalindrome_2("A man, a plan, a canal: Panama"))
+#
+#
+# if __name__ == '__main__':
+#     main()

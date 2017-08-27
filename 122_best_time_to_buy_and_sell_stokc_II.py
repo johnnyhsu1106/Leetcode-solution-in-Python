@@ -39,11 +39,11 @@ class Solution(object):
 
 
 
-def main():
-    s = Solution()
-    print(s.maxProfit([1,2, 4]))
-
-    print(s.maxProfit([7, 1, 5, 3, 6, 4]))
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     s = Solution()
+#     print(s.maxProfit([1,2, 4]))
+#
+#     print(s.maxProfit([7, 1, 5, 3, 6, 4]))
+#
+# if __name__ == '__main__':
+#     main()

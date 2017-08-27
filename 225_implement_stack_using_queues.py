@@ -108,13 +108,13 @@ class MyStack:
 
 
 #
-def main():
-    stack = MyStack()
-    stack.push(1)
-    print(stack.top() == 1)
-    print(stack.pop() == 1)
-    print(stack.empty() == True)
-
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     stack = MyStack()
+#     stack.push(1)
+#     print(stack.top() == 1)
+#     print(stack.pop() == 1)
+#     print(stack.empty() == True)
+#
+#
+# if __name__ == '__main__':
+#     main()

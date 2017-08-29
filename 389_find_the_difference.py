@@ -64,11 +64,11 @@ class Solution:
 
 
 
-def main():
-    s = "abcd"
-    t = "abcde"
-    solution = Solution()
-    print(solution.findTheDifference_1(s,t))
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     s = "abcd"
+#     t = "abcde"
+#     solution = Solution()
+#     print(solution.findTheDifference_1(s,t))
+#
+# if __name__ == '__main__':
+#     main()

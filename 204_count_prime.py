@@ -75,26 +75,22 @@ class Solution(object):
             n += 2
         return True
 
-
-def main():
-    s = Solution()
+# 
+# def main():
+#     s = Solution()
     # print(s.isPrime(2) == True)
     # print(s.isPrime(3) == True)
     # print(s.isPrime(4) == False)
     # print(s.isPrime_2(5) == True)
     # print(s.isPrime(13) == True)
 
-    print(s.countPrimes(2))
-    print(s.countPrimes(4))
-    print(s.countPrimes(5))
-    print(s.countPrimes(999983))
-    print(s.countPrimes(1500000))
-
-
-
-
-
-
-
-if __name__ == '__main__':
-    main()
+#     print(s.countPrimes(2))
+#     print(s.countPrimes(4))
+#     print(s.countPrimes(5))
+#     print(s.countPrimes(999983))
+#     print(s.countPrimes(1500000))
+#
+#
+#
+# if __name__ == '__main__':
+#     main()

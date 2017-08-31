@@ -17,8 +17,6 @@ return its level order traversal as:
 ]
 '''
 
-
-# Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -31,18 +29,28 @@ class Solution:
         :type root: TreeNode
         :rtype: List[List[int]]
         """
+        '''
+        idea:
+        Use the while loop to traverse all nodes in each level.
+        us
+        '''
 
-        lst = []
-        return self.levelOrder_helper(node, lst)
+        if root is None:
+            return []
 
 
-    def levelOrder_helper(self, node, lst):
-        if not node:
-            return lst
+        result = []
+        current_level = [root] # a list stores all nodes in same level, initial value is [root]
 
-        return lst.append([node.val])
-
-        if node.left:
-            lst.extend(self.levelOrder_helper(node.left, lst))
-        if node.right:
-            lst.extend(self.levelOrder_helper(node.right, lst))
+        while current_level: # while len(current) > 0:
+            next_level = []  # a list stores all nodes in next level
+            values = []      # a list stores all nodes' value
+            for node in current_level:
+                values.append(node.val)
+                if node.left:
+                    next_level.append(node.left)
+                if node.right:
+                    next_level.append(node.right)
+            current_level = next_level # update the current_level with next_level
+            result.append(values)
+        return result

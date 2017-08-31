@@ -15,6 +15,7 @@ def run_all_files():
     dirs = os.listdir(os.getcwd())
     py_files = [py_file for py_file in dirs if py_file[-3:]=='.py' and py_file != execute_fname]
     count = 0
+
     file_list('leetcode_solutions_list.txt', py_files)
 
     for py_file in py_files:

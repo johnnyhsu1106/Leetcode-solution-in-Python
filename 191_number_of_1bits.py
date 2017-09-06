@@ -31,6 +31,7 @@ class Solution:
             i += 1
         return output
 
+
     def hammingWeight_2(self,n):
         result = 0
         while n:

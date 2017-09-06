@@ -27,8 +27,10 @@ class Solution:
             if nums_dict[key] == 1:
                 return key
 
+
     def singleNumber_2(self, nums):
         return reduce(operator.xor, nums)
+
 
     def singleNumber_3(self, nums):
 

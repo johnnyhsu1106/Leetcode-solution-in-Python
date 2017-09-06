@@ -27,6 +27,7 @@ class Solution:
             num = nums.pop() # O(1)
             nums.insert(0,num) #O(n-1)
 
+
     def rotate_2(self, nums, k):
         '''
         idea:

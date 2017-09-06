@@ -17,6 +17,12 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
+        '''
+        idea:
+        Go through each element. If nums[i] == nums[i+1], nums.pop(i+1); otherwise, i = i+1
+        pros: intutive
+        cons: O(n^2) and use etra space because of pop operation
+        '''
         if len(nums) == 0:
             return 0
         elif len(nums) ==1:
@@ -31,8 +37,11 @@ class Solution:
         return nums
 
 
-
     def removeDuplicates_2(self, nums):
+        '''
+        idea:
+
+        '''
         if len(nums) == 0:
             return 0
         elif len(nums) ==1:
@@ -44,24 +53,22 @@ class Solution:
             if nums[last] != nums[i]:
                 last += 1
                 nums[last] = nums[i]
-
-
             i += 1
         return last + 1
 
 
 # def main():
 #     s = Solution()
-#     print(s.removeDuplicates_1([]))
-#     print(s.removeDuplicates_1([1]))
-#     print(s.removeDuplicates_1([1,1,2,3,3,3]))
+#     # print(s.removeDuplicates_1([]))
+#     # print(s.removeDuplicates_1([1]))
+#     # print(s.removeDuplicates_1([1,1,2,3,3,3]))
 #
-#
+#     lst = [1,1,2,3,3,3]
 #     print(s.removeDuplicates_2([]))
 #     print(s.removeDuplicates_2([1]))
-#     print(s.removeDuplicates_2([1,1,2,3,3,3]))
-#
+#     print(s.removeDuplicates_2(lst))
+#     print(lst)
 #
 #
 # if __name__ == '__main__':
-    # main()
+#     main()

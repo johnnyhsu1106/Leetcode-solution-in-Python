@@ -23,6 +23,8 @@ class Solution:
         Use while loop, start with index = 0 , check each element equal to the val or not.
         If element is equal to val, pop the element, index stays still
         If element is not equal to val, increase the index
+        The concept is like the concept solving problem 26.
+        However, the pop(i) operation needs extra space and increase runtime.
 
         For example, nums = [3,2,2,3], val = 3
         i = 0 < len(nums)=4: nums[0] = 3, nums.pop(0) -> nums = [2,2,3]

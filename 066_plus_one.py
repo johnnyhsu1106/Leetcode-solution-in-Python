@@ -14,7 +14,7 @@ class Solution:
         '''
         idea:
         brute force
-        however, this is not a good way and not a
+        however, this is not a good way
         '''
         digits = [str(digit) for digit in digits]
         digits = int(''.join(digits))
@@ -51,6 +51,6 @@ class Solution:
     # print(s.plusOne_2([9]))
     # print(s.plusOne_2([1,2,3]))
 
-# 
+#
 # if __name__ == '__main__':
 #     main()

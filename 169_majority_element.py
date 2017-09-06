@@ -35,4 +35,4 @@ class Solution:
                     index = i
                     count = 1
 
-        return nums[idx]
+        return nums[index]

@@ -17,6 +17,7 @@ class Solution(object):
 
         '''
         # edge case: the following cases are edge cases.
+
         # zero or negative number
         if num <= 0:
             return False

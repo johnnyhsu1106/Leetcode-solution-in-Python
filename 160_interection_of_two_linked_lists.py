@@ -95,7 +95,7 @@ class Solution:
         i = 0
         while i < min(length_A, length_B):
             if marker_A is marker_B:
-                return marker_B
+                return marker_B # or return marker_A
             marker_A = marker_A.next
             marker_B = marker_B.next
             i += 1

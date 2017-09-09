@@ -41,12 +41,15 @@ class Solution:
         '''
          a better way
          idea: from the beingng of the string and the end of the string.
-         fidn the chars are both strings by usuing str.isalnum()
+         fidn the chars are both strings by using str.isalnum()
          then lower the chars and compare they are equal no not.
          the codition is i < j , keep find the i and j, which s[i] and s[j] are both either alphabets or numbers
          i is the index from the begining of string
          j is the index from the end of string
         '''
+        if len(s) == 0:
+            return True
+            
         i = 0
         j = len(s) -1
         while i < j:
@@ -61,7 +64,7 @@ class Solution:
             j -= 1
         return True
 
-# 
+#
 # def main():
 #     s = Solution()
 #     print(s.isPalindrome_1("0P"))

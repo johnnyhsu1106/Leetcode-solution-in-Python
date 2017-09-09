@@ -19,7 +19,7 @@ class Solution:
         edge case:
         if nums = [], return 0
 
-        Idea:
+        idea:
         Use while loop, start with index = 0 , check each element equal to the val or not.
         If element is equal to val, pop the element, index stays still
         If element is not equal to val, increase the index

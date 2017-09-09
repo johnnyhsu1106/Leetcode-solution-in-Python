@@ -18,10 +18,16 @@ class Solution:
         :rtype: int
         """
         '''
+        Time: O(n)
+
         idea:
         Go through each element. If nums[i] == nums[i+1], nums.pop(i+1); otherwise, i = i+1
         pros: intutive
-        cons: O(n^2) and use etra space because of pop operation
+        cons: O(n) and use etra space because of pop operation
+        For example:
+        [1,1,2,3,3] -> [1,2,3]
+
+        Please see the problem 083 as well.
         '''
         if len(nums) == 0:
             return 0
@@ -39,8 +45,17 @@ class Solution:
 
     def removeDuplicates_2(self, nums):
         '''
-        idea:
+        Time: O(n)
 
+        idea:
+        Use two pointer, one starts with 0 and another one starts with 1.
+        [1,1,2,3,3] -> [1,2,3,3,3]
+        last = 0
+
+        for i in range(1, len(nums)):
+            if nums[last] != nums[i]:
+                last += 1
+                nums[last] = nums[i]
         '''
         if len(nums) == 0:
             return 0
@@ -52,23 +67,52 @@ class Solution:
         while i < len(nums):
             if nums[last] != nums[i]:
                 last += 1
+                # replace the value, at which last pointet is located, with the value, at which i is located.
                 nums[last] = nums[i]
             i += 1
         return last + 1
 
+    def removeDuplicates_3(self, nums):
+        '''
+        idea:
+        Use extra space
+
+        For example:
+        [1,1,2,3,3] -> [1,2,3]
+        '''
+        if len(nums) == 0:
+            return 0
+        elif len(nums) == 1:
+            return 1
+
+        output = [nums[0]]
+        last = 0
+        for i in range(1, len(nums)):
+            if nums[last] != nums[i]:
+                last = i
+                output.append(nums[i])
+        return len(output)
+
 
 # def main():
 #     s = Solution()
-#     # print(s.removeDuplicates_1([]))
-#     # print(s.removeDuplicates_1([1]))
-#     # print(s.removeDuplicates_1([1,1,2,3,3,3]))
-#
-#     lst = [1,1,2,3,3,3]
-#     print(s.removeDuplicates_2([]))
-#     print(s.removeDuplicates_2([1]))
-#     print(s.removeDuplicates_2(lst))
-#     print(lst)
-#
-#
+
+    # print(s.removeDuplicates_1([]))
+    # print(s.removeDuplicates_1([1]))
+    # print(s.removeDuplicates_1([1,1,2,3,3,3]))
+
+    # lst = [1,1,2,3,3,3]
+    # print(s.removeDuplicates_2([]))
+    # print(s.removeDuplicates_2([1]))
+    # print(s.removeDuplicates_2(lst))
+    # print(lst)
+
+    # lst = [1,1,2,3,3,3]
+    # print(s.removeDuplicates_3([]))
+    # print(s.removeDuplicates_3([1]))
+    # print(s.removeDuplicates_3(lst))
+    # print(lst)
+
+
 # if __name__ == '__main__':
 #     main()

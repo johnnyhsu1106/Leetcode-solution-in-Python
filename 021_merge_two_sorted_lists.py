@@ -20,11 +20,11 @@ class Solution:
         """
 
         '''
-        Because the list is sorted, the way of merging two sorted list is like the Merge Sort.
+        Because the list is sorted, the way of merging two sorted linked list is like the Merge Sort.
 
-        Create a node of linked list for output, for example, dummy = ListNode(0)
-        It doesn't mattter what the dummy (node) is.
-        dummy is used for marked the begining of the output.
+        Create a dummy node of linked list for output, for example, dummy = ListNode(0)
+        It doesn't mattter what the dummy node is.
+        Dummy node is used for marked the begining of the output.
         The reason why we have to create a dummy node in the begining of the linked list
         is that when we manipulat the nodes of linked lists, we can make sure that
         the first node won't change during the node manipulation.

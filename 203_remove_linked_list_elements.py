@@ -41,6 +41,12 @@ class Solution:
         :type val: int
         :rtype: ListNode
         """
+
+        '''
+        idea:
+        Create a dummy node as the head of linked list.
+        Because the node, which is going to be removed, might be the original head of linked list
+        '''
         dummy = ListNode(float('inf'))
         dummy.next = head
         prev_node = dummy
@@ -50,10 +56,13 @@ class Solution:
         while curr_node:
             if curr_node.val == val:
                 prev_node.next = curr_node.next
-            else:
+                #remove the current_node (prev_node is connected to the current node's next node)
+            else: # move forward to the next node(update the prev_node and curr_node)
                 prev_node = curr_node
             curr_node = curr_node.next
         return dummy.next
+
+
 
 # def main():
 #     head = ListNode(0)

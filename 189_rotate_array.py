@@ -50,21 +50,42 @@ class Solution:
             nums[i] = lst[k-i-1]
         # nums= [5,6,7,1,2,3,4]
 
-    # def rotate_3(self, nums, k):
+    def rotate_3(self, nums, k):
+        def reverse(nums, start, end):
+            while start < end:
+                nums[start], nums[end] = nums[end], nums[start]
+                start += 1
+                end -= 1
+
+        reverse(nums, 0 , len(nums)-1) # reverse whole list [1,2,3,4,5,6,7] -> [7,6,5,4,3,2,1]
+        reverse(nums, 0, k-1)          # reverse first part [7,6,5,4,3,2,1]-> [5,6,7,4,3,2,1]
+        reverse(nums, k, len(nums)-1) # reverse second part [5,6,7,4,3,2,1] -> [5,6,7,1,2,3,4]
 
 
 
+    def rotate_4(self, nums, k):
+        return nums[len(nums)-k:] + nums[0:len(nums)-k]
 
+#
 # def main():
 #     s = Solution()
-#     #
-#     # nums = [1,2,3,4,5,6,7]
-#     # s.rotate_1(nums, 3)
-#     # print(nums)
+    #
+    # nums = [1,2,3,4,5,6,7]
+    # s.rotate_1(nums, 3)
+    # print(nums)
 #
 #     nums = [1,2,3,4,5,6,7]
-#     s.rotate_2(nums, 4)
+#     s.rotate_2(nums, 3)
 #     print(nums)
+#
+#
+#     nums = [1,2,3,4,5,6,7]
+#     s.rotate_3(nums, 3)
+#     print(nums)
+#
+#     nums = [1,2,3,4,5,6,7]
+#     lst = s.rotate_4(nums, 3)
+#     print(lst)
 #
 # if __name__ == '__main__':
 #     main()

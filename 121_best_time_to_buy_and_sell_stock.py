@@ -24,7 +24,7 @@ class Solution:
         """
         '''
         The profit = current price - min price shown before
-        use for loop to calculate the profit for each price
+        Use 'for/while' loop to calculate the profit for each price
         if at this point, the profit is greater than before, it would/ may be the max profit.
         '''
 

@@ -39,6 +39,11 @@ class Solution:
 
 
     def swapPairs_2(self, head):
+        '''
+        idea:
+        create a dummy node as the head of linked list
+        return the dummy.next
+        '''
         dummy = ListNode(0)
         dummy.next = head
         curr_node = dummy

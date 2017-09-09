@@ -20,8 +20,8 @@ class Solution:
               [1,3,3,1]     k = 3
              [1,4,6,4,1]    k = 4
 
-             aj(k) = aj-1(k-1) + aj(k-1), if j != 0 or j != k-1
-             a0 = 1 and ak = 1, if j=0 or j = k-1
+             ai(k) = ai-1(k-1) + ai(k-1), if i != 0 or i != k-1
+             a0 = 1 and ak = 1, if i=0 or i = k-1
 
         '''
         prev_row = [1]
@@ -29,13 +29,13 @@ class Solution:
         if rowIndex == 0:
             return  prev_row
 
-        for i in range(1,rowIndex+1): # for each row
+        for k in range(1,rowIndex+1): # for each row
             current_row = []
-            for j in range(i+1): # for each element in each row
-                if j == 0 or j == i:
+            for i in range(k+1): # for each element in each row
+                if i == 0 or i == k:
                     current_row.append(1)
                 else:
-                    current_row.append(prev_row[j-1] + prev_row[j])
+                    current_row.append(prev_row[i-1] + prev_row[i])
             prev_row = current_row # update the row (move on to the next row)
 
         return current_row

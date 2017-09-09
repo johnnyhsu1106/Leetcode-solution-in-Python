@@ -8,4 +8,4 @@ class Solution:
     # @param {int} n non-negative integer, n posts
     # @param {int} k non-negative integer, k colors
     # @return {int} an integer, the total number of ways
-    def numWays(self, n, k):
+    # def numWays(self, n, k):

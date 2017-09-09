@@ -48,22 +48,27 @@ class Solution:
         """
 
         '''
+        Time: O(n)
+        Space: O(1)
+        
         current_node = head
         while
         start with current_node
             while
-                find the next_node and check does next_node exists and is equal to current_node
+                find the next_node and check whether next_node exists and is equal to current_node
                 if next_node is equal to current_node, find the next node
                 until the node's value is not equal to current_node
             Assign the pointer to the node we find, whose value is not equal to current_node's value
-            move on  (current_node = next_node)
+            Then, move on  (current_node = next_node)
+
+            Please see the problem 026
 
             PS: the whole idea is like remove dulplicates element from a sorted array/list
             a sorted list, lst = [1,1,2,3,3]
-
+            #  use two pointer
             i = 0
             j = 1
-            output = [lst[1]]
+            output = [lst[0]]
             while i < len(lst):
                 next_ele = lst[j]
                 while j < len(lst) and lst[i] == lst[j]:

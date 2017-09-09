@@ -26,10 +26,12 @@ class ListNode:
 
 
 class Solution:
-    def isPalindrome(self, head):
+    def isPalindrome_1(self, head):
         """
         :type head: ListNode
         :rtype: bool
+        Time: O(n)
+        Space: O(n), extra space to use string to store all values of linked list's node
         """
 
         '''
@@ -38,20 +40,18 @@ class Solution:
         2. Reverse the linked list, repeat the step 1, and then get string s2.
         3. return s1 == s2
         '''
-        s1 = self.fetchAllNodeValue(head)
+        s1 = self.fetchAllValues(head)
         head = self.reverse(head)
-        s2 = self.fetchAllNodeValue(head)
+        s2 = self.fetchAllValues(head)
         return s1 == s2
 
-    def fetchAllNodeValue(self, head):
+    def fetchAllValues(self, head):
         s1 = ''
         curr_node = head
         while curr_node:
             s1 += str(curr_node.val)
             curr_node = curr_node.next
         return s1
-
-
 
     def reverse(self, head):
         prev_node = None
@@ -63,6 +63,35 @@ class Solution:
             curr_node = next_node
         head = prev_node
         return head
+
+
+    def isPalindrome_2(self, head):
+        '''
+        Time: O(n)
+        Space: O(n)
+        '''
+        node = head
+        s1 = ''
+        s2 = ''
+        while node:
+            s1 = s1 + str(node.val)
+            s2 = str(node.val) + s2
+            node = node.next
+        return s1 == s2
+
+
+
+    # def isPalindrome_3(self, head):
+    #     '''
+    #     Time: O(n)
+    #     Space: O(1)
+    #     '''
+
+
+
+
+
+
 
 
 # def main():

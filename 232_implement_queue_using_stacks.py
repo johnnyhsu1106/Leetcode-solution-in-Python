@@ -15,10 +15,58 @@ as long as you use only standard operations of a stack.
 You may assume that all operations are valid (for example,
 no pop or peek operations will be called on an empty queue).
 '''
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+class Stack_node:
+    def __init__(self):
+        self.top = None
+
+    def push(self, val):
+        node = Node(val)
+        if self.top:
+            node.next = self.top
+            self.top = node
+        else:
+            self.top = node
+
+    def pop(self):
+        if self.top:
+            node = self.top
+            self.top = node.next
+            return node.val
+        return None
+
+    def empty(self):
+        return self.top is None
+
+    def peek(self):
+        return self.top.val
+
+
+class Stack_list:
+    def __init__(self):
+        self.values = []
+
+    def push(self, value):
+        self.values.append(value)
+
+    def pop(self):
+        if not self.empty():
+            return self.values.pop()
+
+    def peek(self):
+        if not self.empty():
+            return self.values[-1]
+
+    def empty(self):
+        return len(self.values) == 0
 
 class MyQueue:
     '''
-    First, define the class Stack in the bottom.
+    First, define the class Stack above.
     Then implement the stack method: push(), pop(), peek(), empty()
     There are two way to implement Stack:
     1. Create Node class
@@ -45,8 +93,8 @@ class MyQueue:
         """
         Initialize your data structure here.
         """
-        self.old_stack = Stack()
-        self.new_stack = Stack()
+        self.old_stack = Stack_list()
+        self.new_stack = Stack_list()
 
 
     def push(self, x):
@@ -106,44 +154,28 @@ class MyQueue:
                 self.old_stack.push(self.new_stack.pop())
 
 
-class Stack:
-    def __init__(self):
-        self.values = []
 
-    def push(self, value):
-        self.values.append(value)
 
-    def pop(self):
-        if not self.empty():
-            return self.values.pop()
-
-    def peek(self):
-        if not self.empty():
-            return self.values[-1]
-
-    def empty(self):
-        return len(self.values) == 0
-
-# def main():
+def main():
     #  Test the class Stack
-    # stack = Stack()
-    # print(stack.empty())
-    # stack.push(1)
-    # stack.push(2)
-    # print(stack.peek())
-    # print(stack.pop())
-    # print(stack.pop())
-    # print(stack.empty())
-    #
+    stack = Stack_node()
+    print(stack.empty() == True)
+    stack.push(1)
+    stack.push(2)
+    print(stack.peek() == 2)
+    print(stack.pop() == 2)
+    print(stack.pop() == 1)
+    print(stack.empty() == True)
+
 
     #  Test the class MyQueue
-    # queue = MyQueue()
-    # queue.push(1)
-    # queue.push(2)
-    # print(queue.peek())
-    # print(queue.pop())
+    queue = MyQueue()
+    queue.push(1)
+    queue.push(2)
+    print(queue.peek() == 1)
+    print(queue.pop() == 1)
 
 
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()

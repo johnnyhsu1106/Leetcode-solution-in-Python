@@ -11,13 +11,13 @@ idea:
 Use the stack to solve this problem
 Scan the string from left to righ and every time we see the opening parentheses,
 for example, '(', '[', '{'
-we push it to stack because we want the last opening parentheses to be closed  first (FILO)
+we push it to stack because we want the last opening parentheses to be closed first (FILO)
 
 Then when wee see the closing parentheses,
 we check whether the last opend parentheses is corresponding to the closing match,
 by poping the element from stack. If it's a valid match, then we check next one, if not, return false.
 
-At meantime, check if the stack is empty, return false.
+In the meantime, check if the stack is empty, return false.
 It means there is no opening parentheses corresponding to the closing one.
 
 In the end, after check all parentheses in the string, check if stack is empty or not.
@@ -92,7 +92,7 @@ class Solution:
             if char == parentheses_pair[0]:
                 return True
         return False
-        
+
 
     def match_parenthese(self, opening_p, closing_p, parentheses):
         '''

@@ -4,7 +4,7 @@ You have to paint all the posts such that no more than two adjacent fence posts 
 Return the total number of ways you can paint the fence.
 Note: n and k are non-negative integers.
 '''
-class Solution:
+# class Solution:
     # @param {int} n non-negative integer, n posts
     # @param {int} k non-negative integer, k colors
     # @return {int} an integer, the total number of ways

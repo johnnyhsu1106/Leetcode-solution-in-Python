@@ -85,6 +85,7 @@
 342_power_of_four.py
 344_reverse_string.py
 345_reverse_vowels_of_string.py
+346_moving_average_from_data_stream.py
 349_intersection_of_two_arrays.py
 350_intersectin_of_two_array_II.py
 371_sum_of_two_integers.py

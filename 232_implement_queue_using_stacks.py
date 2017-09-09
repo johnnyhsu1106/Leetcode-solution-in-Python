@@ -154,28 +154,28 @@ class MyQueue:
                 self.old_stack.push(self.new_stack.pop())
 
 
-
-
-def main():
-    #  Test the class Stack
-    stack = Stack_node()
-    print(stack.empty() == True)
-    stack.push(1)
-    stack.push(2)
-    print(stack.peek() == 2)
-    print(stack.pop() == 2)
-    print(stack.pop() == 1)
-    print(stack.empty() == True)
-
-
-    #  Test the class MyQueue
-    queue = MyQueue()
-    queue.push(1)
-    queue.push(2)
-    print(queue.peek() == 1)
-    print(queue.pop() == 1)
-
-
-
-if __name__ == '__main__':
-    main()
+# 
+#
+# def main():
+#     #  Test the class Stack
+#     stack = Stack_node()
+#     print(stack.empty() == True)
+#     stack.push(1)
+#     stack.push(2)
+#     print(stack.peek() == 2)
+#     print(stack.pop() == 2)
+#     print(stack.pop() == 1)
+#     print(stack.empty() == True)
+#
+#
+#     #  Test the class MyQueue
+#     queue = MyQueue()
+#     queue.push(1)
+#     queue.push(2)
+#     print(queue.peek() == 1)
+#     print(queue.pop() == 1)
+#
+#
+#
+# if __name__ == '__main__':
+#     main()

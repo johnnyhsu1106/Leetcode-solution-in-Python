@@ -42,6 +42,7 @@
 167_two_sum_II_input_array_is_sorted.py
 168_excel_sheet_column_title.py
 169_majority_element.py
+170_two_sum_III_data_structure_design.py
 171_excel_column_sheet_number.py
 172_factorial_trailing_zeros.py
 189_rotate_array.py
@@ -65,6 +66,7 @@
 242_valid_anagram.py
 243_shortest_word_distance.py
 246_strobogrammatic_number.py
+249_group_shifted_strings.py
 252_meeting_room.py
 256_paint_house.py
 257_binary_tree_paths.py

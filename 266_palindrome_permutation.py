@@ -11,8 +11,9 @@ Basic idea is:
 if s with odd characters, only one character is allowed to appear odd times.
 if s with even characters, each character should appear even times.
 '''
+from collections import defaultdict
 
-class Solution(object):
+class Solution:
     def canPermutePalindrome_1(self, s):
 
         """
@@ -23,13 +24,22 @@ class Solution(object):
 
     def canPermutePalindrome_2(self, s):
 
-        char_count = {}
+        char_count = defaultdict(int)
         for char in s:
-            if char not in char_count:
-                char_count[char] = 0
             char_count[char] += 1
 
         total = 0
         for char in char_count:
             total += char_count[char] % 2
+        #  if total = 0 or 1 , it means the permutation of this string may form palindrome
         return total < 2
+
+# def main():
+#     s = Solution()
+#     print(s.canPermutePalindrome_2('code') == False)
+#     print(s.canPermutePalindrome_2('aab') == True)
+#     print(s.canPermutePalindrome_2('carerac') == True)
+#
+#
+# if __name__ == '__main__':
+#     main()

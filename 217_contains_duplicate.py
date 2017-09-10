@@ -3,9 +3,10 @@ Given an array of integers, find if the array contains any duplicates.
 Your function should return true if any value appears at least twice in the array,
 and it should return false if every element is distinct.
 '''
+from collections import defaultdict
+
 class Solution:
     def containsDuplicate_1(self, nums):
-
         return len(nums) > len(set(nums))
 
 
@@ -25,10 +26,10 @@ class Solution:
 
 
     def containsDuplicate_3(self, nums):
-        nums_dict = {}
+        nums_dict = defaultdict(int)
         for num in nums:
-            if num not in nums_dict:
-                nums_dict[num] = 0
+            # if num not in nums_dict:
+                # nums_dict[num] = 0
             nums_dict[num] += 1
             if nums_dict[num] > 1:
                 return True

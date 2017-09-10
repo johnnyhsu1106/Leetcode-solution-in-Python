@@ -75,7 +75,7 @@ class Solution(object):
             n += 2
         return True
 
-# 
+#
 # def main():
 #     s = Solution()
     # print(s.isPrime(2) == True)

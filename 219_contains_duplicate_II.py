@@ -3,7 +3,7 @@ Given an array of integers and an integer k,
 find out whether there are two distinct indices i and j in the array
 such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
 '''
-class Solution(object):
+class Solution:
     def containsNearbyDuplicate(self, nums, k):
         """
         :type nums: List[int]
@@ -13,7 +13,7 @@ class Solution(object):
         if len(nums) <= 1:
             return False
 
-        num_map = {} # key: value = num: [index1, index2,...]
+        num_map = {} # key: value = num: index
         for i in range(len(nums)):
             num = nums[i]
             if num in num_map and i - num_map[num] <= k:

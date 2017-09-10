@@ -29,6 +29,7 @@ class Solution:
         1. word matchs wrong pattern and word is seen before
         2. word matchs wrong pattern and word is never seeen before.
 
+        pleae see the problem 205 Isomorphic String
         '''
         words = string.split()
         # edge case

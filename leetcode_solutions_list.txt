@@ -1,4 +1,5 @@
 001_two_sum.py
+003_longest_substring_without_repeat_characters.py
 006_zigzag_conversion.py
 007_reverse_integer.py
 009_palindrom_number.py
@@ -77,9 +78,11 @@
 270_closest_binary_search_tree_value.py
 276_paint_fence.py
 283_move_zeros.py
+288_unique_word_abbreviation.py
 290_word_pattern.py
 292_nim_game.py
 293_flip_game.py
+299_bulls_and_cows.py
 303_range_sum_query_immutable.py
 322_coin_change.py
 326_power_of_three.py

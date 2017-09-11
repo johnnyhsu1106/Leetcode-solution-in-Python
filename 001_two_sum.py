@@ -23,7 +23,7 @@ class Solution:
         brute force ... use two loop
         '''
 
-        for i in range(len(nums)):
+        for i in range(len(nums)-1):
             for j in range(i+1, len(nums)):
                 if nums[i] + nums[j] == target:
                     return [i,j]
@@ -32,10 +32,9 @@ class Solution:
         '''
         idea:
         use extra memory to track the num and index, such as dictionary(hashmap)
-
         '''
 
-        nums_dict = {}
+        nums_dict = {} # {num: index}
         for i in range(len(nums)):
             num = nums[i]
             if num in nums_dict:

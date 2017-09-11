@@ -14,7 +14,7 @@ Note: You may assume the string contain only lowercase letters.
 
 
 # from collections import defaultdict
-
+from collections import defaultdict
 class Solution:
     def firstUniqChar_1(self, s):
         """
@@ -30,19 +30,12 @@ class Solution:
 
         Time: O(n)
         '''
-        lookup = {}
+        lookup = defaultdict(int)
         for char in s:
-            if char not in lookup:
-                lookup[char] = 0
             lookup[char] += 1
 
-        unique_chars = set()
-        for char in loopup:
-            if lookup[char] == 1:
-                unique_chars.add(char)
-
         for i, char in enumerate(s):
-            if char in unique_chars:
+            if lookup[char] == 1:
                 return i
         return -1
 

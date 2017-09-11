@@ -3,7 +3,8 @@ Given two strings s and t, determine if they are isomorphic.
 
 Two strings are isomorphic if the characters in s can be replaced to get t.
 
-All occurrences of a character must be replaced with another character while preserving the order of characters.
+All occurrences of a character must be replaced with another character
+while preserving the order of characters.
 No two characters may lookup to the same character but a character may lookup to itself.
 
 For example,
@@ -26,8 +27,6 @@ class Solution:
         '''
         idea:
         see the problem 290 as well.
-    
-
         '''
         # edge case
         if len(s) != len(t):
@@ -35,6 +34,7 @@ class Solution:
 
         s2t_lookup = {} # key: value = char in s : char in t
         t2s_lookup = {} # key: value = char in t : char in s
+
         for char_s, char_t in zip(s,t):
             if char_s not in s2t_lookup and char_t not in t2s_lookup:
                 s2t_lookup[char_s] = char_t

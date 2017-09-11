@@ -28,8 +28,6 @@ class Solution:
     def containsDuplicate_3(self, nums):
         nums_dict = defaultdict(int)
         for num in nums:
-            # if num not in nums_dict:
-                # nums_dict[num] = 0
             nums_dict[num] += 1
             if nums_dict[num] > 1:
                 return True

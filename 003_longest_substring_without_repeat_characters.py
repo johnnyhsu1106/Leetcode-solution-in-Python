@@ -10,6 +10,9 @@ Note that the answer must be a substring, "pwke" is a subsequence and not a subs
 '''
 from collections import defaultdict
 class Solution:
+
+
+
     def lengthOfLongestSubstring_1(self, s):
         """
         :type s: str
@@ -17,7 +20,7 @@ class Solution:
         """
         '''
         idea:
-        Use two pointers, start, last, to solve this problem.
+        Use two pointers, start, last, and hashmap to solve this problem. (sliding window)
 
         '''
         result = 0
@@ -36,6 +39,26 @@ class Solution:
     def lengthOfLongestSubstring_2(self, s):
         '''
         idea:
+        Use sliding window and set()
+        '''
+        last = 0
+        result = 0
+        lookup = set()
+
+        for start in range(len(s)):
+            while last < len(s) and s[last] not in lookup:
+                lookup.add(s[j])
+                result = max(result, last - start + 1)
+                j += 1
+            lookup.discard(s[start])
+        return max_length
+
+
+
+    def lengthOfLongestSubstring_3(self, s):
+        '''
+        idea:
+        sliding window.
         '''
 
         result = 0
@@ -52,6 +75,8 @@ class Solution:
 
 
 # def main():
+#     s = Solution()
+#     print(s.lengthOfLongestSubstring_1('abcabcbb'))
 #
 # if __name__ == '__main__':
 #     main()

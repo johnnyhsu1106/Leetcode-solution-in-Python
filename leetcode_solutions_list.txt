@@ -55,8 +55,10 @@
 204_count_prime.py
 205_isomorphic_strings.py
 206_reverse_linked_list.py
+209_minimum_size_subarray_sum.py
 217_contains_duplicate.py
 219_contains_duplicate_II.py
+223_rectangle_area.py
 225_implement_stack_using_queues.py
 226_invert_binary_tree.py
 231_power_of_two.py
@@ -101,5 +103,6 @@
 400_nth_digit.py
 404_sum_of_left_leaves.py
 405_convert_a_number_to_hexadecimal.py
+409_longest_palindrome.py
 518_coin_change_2.py
 567_permutation_in_string.py

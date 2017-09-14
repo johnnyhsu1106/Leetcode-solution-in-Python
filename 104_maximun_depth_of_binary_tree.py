@@ -28,7 +28,7 @@ class Solution:
                                       /
                                      3
         idea:
-        use reursion to solve this probelm.
+        Use reursion to solve this probelm.
         if node exist, level = 1
         if node.left exists or node.right exists, go one level down,
         level += max (the max level right node has, the max level the left node has)

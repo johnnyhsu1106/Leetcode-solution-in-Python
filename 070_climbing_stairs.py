@@ -15,6 +15,8 @@ class Solution:
         :rtype: int
         """
         '''
+        idea:
+        recursion, dynamic programming, and memorization
         n = 1, result(1) = 1 , (1)
         n = 2, result(2) = 1 + 1 = 2 , (1,1) or (2)
         n = 3, result(3) = 1 + 2 = 3, (1,1,1), (1,2), (2,1), which is result(1) + result(2)

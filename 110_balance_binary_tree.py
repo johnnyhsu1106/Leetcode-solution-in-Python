@@ -38,14 +38,14 @@ class Solution:
             return True
 
         elif node.left or node.right:
-            if math.fabs(self.depth(node.left) - self.depth(node.right)) > 1:
+            if math.fabs(self.depth_1(node.left) - self.depth_1(node.right)) > 1:
                 return False
 
         return self.isBalanced_helper(node.left) and self.isBalanced_helper(node.right)
 
 
 
-    def depth(self, node):
+    def depth_1(self, node):
         '''
         please see the leetcode problem 104
         '''
@@ -54,5 +54,16 @@ class Solution:
 
         level = 1
         if node.left or node.right:
-            level += max(self.depth(node.left), self.depth(node.right))
+            level += max(self.depth_1(node.left), self.depth_1(node.right))
         return level
+
+
+    def depth_2(self, node):
+
+        if not node:
+            return 0
+
+        left_depth = self.depth_2(node.left)
+        right_depth = self.depth_2(node.right)
+
+        return max(left_depth, right_depth) + 1

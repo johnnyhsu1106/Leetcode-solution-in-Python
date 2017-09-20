@@ -21,7 +21,7 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    def binaryTreePaths(self, root):
+    def binaryTreePaths_1(self, root):
         """
         :type root: TreeNode
         :rtype: List[str]
@@ -46,6 +46,30 @@ class Solution:
             if node.right:
                 self.findPath(node.right, path + str(node.val)+ '->', lst)
 
+
+
+    def binaryTreePaths_2(self, root):
+        paths = []
+        if not root:
+            return paths
+
+        left_paths = self.binaryTreePaths_2(root.left)
+        right_paths = self.binaryTreePaths_2(root.right)
+
+
+        for path in left_paths:
+            paths.append(str(root.val) + '->' + path)
+
+        for path in right_paths:
+            paths.append(str(root.val) + '->' + path)
+
+        if len(paths) == 0:
+            paths.append(str(root.val))
+
+        return paths
+
+
+
 # def main():
 #     '''
 #        1
@@ -65,7 +89,9 @@ class Solution:
 #
 #
 #     s = Solution()
-#     print(s.binaryTreePaths(root))
+#     print(s.binaryTreePaths_1(root))
+#     print(s.binaryTreePaths_2(root))
+#
 #
 # if __name__ == '__main__':
 #     main()

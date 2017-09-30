@@ -30,9 +30,9 @@ class Solution:
         the first node won't change during the node manipulation.
 
         Then, compare the first node of each list, then pointer is pointed to the small one.
-        Then move the node of the list with the smaller node and the node of current_node
+        Then move the node of the list with the smaller node and the node of last_node
         Until node of one of list is None
-        Then connect the tail of current_node to the head of the list, which first node is not None.
+        Then connect the tail of last_node to the head of the list, which first node is not None.
 
         For example:
 
@@ -84,20 +84,20 @@ class Solution:
 
         '''
 
-        current_node = ListNode(0)
-        dummy = current_node
+        dummy = ListNode(0)
+        last_node = dummy
         while l1 and l2:
             if l1.val < l2.val:
-                current_node.next = l1
+                last_node.next = l1
                 l1 = l1.next
             else:
-                current_node.next = l2
+                last_node.next = l2
                 l2 = l2.next
-            current_node = current_node.next
+            last_node = last_node.next
 
         if l1:
-            current_node.next = l1
+            last_node.next = l1
         else:
-            current_node.next = l2
+            last_node.next = l2
 
         return dummy.next
